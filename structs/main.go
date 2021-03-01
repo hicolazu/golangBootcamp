@@ -17,8 +17,8 @@ func (p person) print() {
 	fmt.Printf("%+v", p)
 }
 
-func (pointerToPerson *person) updateName(newFirstName string) {
-	(*pointerToPerson).firstName = newFirstName
+func (p *person) updateName(newFirstName string) {
+	(*p).firstName = newFirstName
 }
 
 func main() {
@@ -34,3 +34,19 @@ func main() {
 	jim.updateName("Jimmy")
 	jim.print()
 }
+
+/*
+	Value Types: Use pointers to change these things in a fuction
+		- int
+		- float
+		- string
+		- bool
+		- struct
+
+	Reference Types: Don't worry about pointers with these
+		- slices
+		- maps
+		- channels
+		- pointers
+		- functions
+*/
